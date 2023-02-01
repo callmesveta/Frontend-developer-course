@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Позиционирование</title>
+
+    <style>
+    
+    		div.item {
+            	width: 100px;
+ 				height: 100px;
+  				border: 1px solid red;
+            }
+  
+            div.static {
+    			position: static;
+    			border: 1px solid red;
+			}
+            
+            div.relative {
+    			position: relative;
+                left: 30px;
+    			border: 1px solid yellow;
+			}
+            
+            div.absolute {
+    			position: absolute;
+                top: 600px;
+                left: 50px;
+                border: 1px solid blue;
+			}
+            
+            div.fixed {
+    			position: fixed;
+                top: 400px;
+                left: 50px;
+                border: 1px solid green;
+			}
+            
+            .layer1, .layer2, .layer3, .layer4 {
+    			position: relative;
+   			} 
+   		    .layer1, .layer3 {
+    			font-size: 50px;
+    			color: orange;
+   			}
+   			.layer2, .layer4 {
+    			top: -55px;
+    			left: 5px;
+    			color: blue;
+    			font-size:70px;
+   			}
+   			.layer1 { z-index: 2; }
+   			.layer2 { z-index: 1; }
+   			.layer3 { z-index: 4; }
+   			.layer4 { z-index: 3; }
+            
+            
+            div.flex-container {
+  				display: flex;
+  				flex-direction: row-reverse;
+  				background-color: blue;
+				justify-content: center;
+			}
+
+  			div.item1 {
+  				background-color: white;
+  				width: 100px;
+  				border: 3px solid blue;
+  				text-align: center;
+  				line-height: 30px;
+  				font-size: 25px;
+			}
+            
+
+    </style>
+    
+
+</head>
+
+
+<body>
+
+    <h1>Статичное позиционирование</h1>
+    
+    <div class="item static">статичный</div>
+    
+ 	
+    <h1>Относительное позиционирование</h1>
+    
+    <div class="item"> статичный </div>
+    <div class="item relative">относительный</div>
+    
+    
+    <h1>Абсолютное позиционирование</h1>
+    
+    <div class="item"> статичный </div>
+    <div class="item absolute"> абсолютный </div>
+    <div class="item"> статичный </div>
+    
+    
+    <h1>Фиксированное позиционирование</h1>
+    
+    <div class="item"> статичный </div>
+    <div class="item fixed">фиксированный </div>
+    <div class="item"> статичный </div>
+    
+    <h1>Перекрывающий элемент z-index</h1>
+   
+  	<p>Слой 1 наверху</p>
+  	<div class="layer1">Слой 1</div>
+  	<div class="layer2">Слой 2</div> 
+  	<p>Слой 4 наверху</p>
+  	<div class="layer3">Слой 3</div>
+  	<div class="layer4">Слой 4</div>
+   
+   
+    
+    <h1>Flexbox</h1>
+    
+   <div class="flex-container">
+  	<div class="item1">1</div>
+  	<div class="item1">2</div>
+  	<div class="item1">3</div>
+ 	<div class="item1">4</div>
+  	<div class="item1">5</div>
+  	<div class="item1">6</div>
+  	<div class="item1">7</div>
+  	<div class="item1">8</div>
+  </div>
+    
+</body>
+
+
+</html>
