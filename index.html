@@ -1,1 +1,72 @@
-<div>Hello world 2</div>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Отзывчивая вёрстка</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+	div.gallery {
+    border: 1px solid black;
+    width: 30%;
+	}
+
+
+	div.gallery img {
+    width: 100%;
+    height: auto;
+	}
+
+	div.title {
+    padding: 15px;
+    text-align: center;
+	}
+
+	div.flex-container {
+  						display: flex;
+  						flex-wrap: wrap;
+						justify-content: space-around;
+                        		gap: 10px;
+	}
+    
+    
+    @media screen and (max-width: 450px) {
+    div.gallery {
+    	width: 100%;
+        }
+    }
+    
+</style>
+</head>
+
+<body>
+
+
+	<div class="flex-container">
+        
+    	<div class="gallery">
+    		<img src="https://kawai.shikimori.one/system/user_images/original/770872/1548791.jpg" alt="Клинок рассекающий демонов">
+    		<div class="title">Клинок, рассекающий демонов</div>
+    	</div>
+    	
+    
+        <div class="gallery">
+    		<img src="https://oir.mobi/uploads/posts/2020-01/1580110836_1-p-naruto-1.jpg" alt="Наруто">
+    		<div class="title">Наруто</div>
+    	</div>
+    
+    	
+        <div class="gallery">
+    		<img src="https://www.kino-teatr.ru/news/23181/205114.jpg" alt="Атака титанов">
+    		<div class="title">Атака титанов</div>
+    	</div>
+    	
+    </div>    
+
+</body>
+</html>
+
