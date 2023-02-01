@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Рассказ обо мне</title>
+
+    <style>
+
+		p {color: green;
+		   font-weight: bold;}
+
+            .font-family{font-family: arial;}
+
+            .font-style{font-style: italic;}
+
+            .font-size{font-size: 120%;}    
+ 
+            .text-transform{text-transform: uppercase;}
+     
+            .text-decoration{text-decoration: underline;}
+            
+            ul {list-style-type: square;} 
+
+    </style>
+    
+
+</head>
+
+
+<body>
+
+    <h1>Жамбалова Света</h1>
+
+    <h2>Тут расскажу немного о себе</h2>
+
+    <img src="https://i.pinimg.com/736x/f4/d2/96/f4d2961b652880be432fb9580891ed62.jpg" alt="Милый котик">
+
+  
+    <p>Меня зовут Света. Мне 26 лет. Работаю инженером технической поддержки в Интернет-провайдере.
+       Хочу поменять сферу деятельности, поэтому учусь новому. Пока нравится.
+       HTML изучала немного в универе, но всё равно всё забыла - вспоминаю.
+       Люблю кататься на лыжах.
+       Есть кошечка.</p>
+
+    <UL>
+    <li style="font-family: arial;">Здесь изменила шрифт на arial свойством font-family</li>
+    <li style="font-style: italic;">Тут изменила стиль шрифта на курсив свойством font-style;</li>
+    <li style="font-size: 120%;">А тут размер шрифта в процентах свойством font-size;</li>
+    <li style="text-transform: uppercase;">Здесь все буквы прописные (заглавные);</li>
+    <li style="text-decoration: underline;">И последнее - подчёркнутый текст.</li>
+    </UL>
+    
+    <h3>Цвет в CSS можно задать следующими способами:</h3>
+    
+    <UL>
+    
+    <li>Шестнадцатеричный цвет;</li>
+    <li>RGB цвет;</li>
+    <li>RGBA цвет;</li>
+    <li>HSL цвет;</li>
+    <li>HSLA цвет;</li>
+    <li>Предопределенные / кроссбраузерные названия цвета.</li>
+    
+    </UL>
+    
+</body>
+
+
+</html>
