@@ -26,14 +26,12 @@ food.shift();
 
 console.log('1.'+' '+food[0]);
 
-console.log(food);
-
 
 // 2. добавляем удалённое блюдо и ставим первым в списке
 
 food.unshift('syrniki');
 
-console.log('1.'+' '+food[0]);
+console.log('2.'+' '+food[0]);
 
 
 
