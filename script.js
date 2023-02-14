@@ -41,8 +41,13 @@ let summPrice = syrniki.price+carbonara.price+bananaToast.price; //сумма з
 
 let summCostPrice = syrniki.costPrice+carbonara.costPrice+bananaToast.costPrice; //сумма себестоимости трёх блюд
 
-console.log('3.'+' '+'Выручка за три проданных блюда = '+`${summPrice-summCostPrice}`); //выручка
+console.log('3.'+' '+'Выручка за три проданных блюда = '+`${summPrice-summCostPrice}`); //сумма выручки за три блюда
 
+console.log('Выручка за Syrniki = '+`${syrniki.price-syrniki.costPrice}`);
+
+console.log('Выручка за Carbonara = '+`${carbonara.price-carbonara.costPrice}`);
+
+console.log('Выручка за Banana Toast = '+`${bananaToast.price-bananaToast.costPrice}`);
 
 // 4. удаляем элементы из массива, кроме одного - bananaToast
 
