@@ -51,7 +51,7 @@ delete food[0];
 
 delete food[1];
 
-//console.log(food[food.length - 3 + food[2]]);
+//food.splice(0, 2); ---- либо можно удалить так, чтобы не оставить пустых мест в массиве
 
 console.log('4.'+' '+food[0]);
 console.log(food[1]);
