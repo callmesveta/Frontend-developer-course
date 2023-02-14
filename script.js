@@ -26,6 +26,7 @@ food.shift();
 
 console.log('1.'+' '+food[0]);
 
+console.log(food);
 
 
 // 2. добавляем удалённое блюдо и ставим первым в списке
