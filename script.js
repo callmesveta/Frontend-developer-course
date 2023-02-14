@@ -1,4 +1,5 @@
-let syrniki = {                              //блюдо
+ let syrniki = { 
+  name: 'Сырники',                            //блюдо
   ingredients: ['творог', 'мука', 'яйцо'],   //ингредиенты
   costPrice: 50,                             //себестоимость
   price: 100                                 //цена блюда
@@ -7,6 +8,7 @@ let syrniki = {                              //блюдо
 
 
 let carbonara = {
+  name: 'Карбонара',
   ingredients: ['паста', 'бекон', 'сливки', 'сыр'],
   costPrice: 180,
   price: 350
@@ -15,27 +17,26 @@ let carbonara = {
 
 
 let bananaToast = {
+  name: 'Тосты с бананом',
   ingredients: ['тост', 'Нутелла', 'банан'],
   costPrice: 30,
   price: 60
 };
 
 
-
-let food = ['syrniki', 'carbonara', 'bananaToast'];
-
+let food = [syrniki, carbonara, bananaToast];
 
 // 1. удаляем первое блюдо и смещаем массив налево
 
 food.shift();
 
-console.log('1.'+' '+food[0]);
+console.log('1.'+' '+JSON.stringify(food[0]));
 
 
 
 // 2. добавляем удалённое блюдо и ставим первым в списке, удаляем один ингредиент
 
-food.unshift('syrniki');
+food.unshift(JSON.stringify(syrniki));
 
 console.log('2.'+' '+food[0]);
 
@@ -54,11 +55,11 @@ let summCostPrice = syrniki.costPrice+carbonara.costPrice+bananaToast.costPrice;
 
 console.log('3.'+' '+'Выручка за три проданных блюда = '+`${summPrice-summCostPrice}`); //сумма выручки за три блюда
 
-console.log('Выручка за Syrniki = '+`${syrniki.price-syrniki.costPrice}`);
+console.log('Выручка за Сырники = '+`${syrniki.price-syrniki.costPrice}`);
 
-console.log('Выручка за Carbonara = '+`${carbonara.price-carbonara.costPrice}`);
+console.log('Выручка за Карбонару = '+`${carbonara.price-carbonara.costPrice}`);
 
-console.log('Выручка за Banana Toast = '+`${bananaToast.price-bananaToast.costPrice}`);
+console.log('Выручка за Тосты с бананом = '+`${bananaToast.price-bananaToast.costPrice}`);
 
 
 
@@ -70,9 +71,9 @@ delete food[1];
 
 //food.splice(0, 2); ---- либо можно удалить так, чтобы не оставить пустых мест в массиве
 
-console.log('4.'+' '+food[0]);
-console.log(food[1]);
-console.log(food[2]);
+console.log('4.'+' '+JSON.stringify(food[0]));
+console.log(JSON.stringify(food[1]));
+console.log(JSON.stringify(food[2]));
 
 
 
