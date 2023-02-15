@@ -26,7 +26,6 @@ let bananaToast = {
 
 let food = [syrniki, carbonara, bananaToast];
 
-console.log(food);
 
 // 1. удаляем первое блюдо и смещаем массив налево
 
