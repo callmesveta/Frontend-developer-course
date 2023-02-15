@@ -24,7 +24,9 @@ let bananaToast = {
 };
 
 
-let food = [syrniki.name, carbonara.name, bananaToast.name];
+let food = [syrniki, carbonara, bananaToast];
+
+console.log(food);
 
 // 1. удаляем первое блюдо и смещаем массив налево
 
@@ -36,9 +38,9 @@ console.log(`1. ${JSON.stringify(food[0])}`);
 
 // 2. добавляем удалённое блюдо и ставим первым в списке, удаляем один ингредиент "мука"
 
-food.unshift(JSON.stringify(syrniki.name));
+food.unshift(syrniki);
 
-console.log(`2. ${food[0]}`);
+console.log(`2. ${JSON.stringify(food[0])}`);
 
 syrniki.ingredients.splice(1, 1);
 
