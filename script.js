@@ -34,13 +34,13 @@ console.log(`1. ${JSON.stringify(food[0])}`);
 
 
 
-// 2. добавляем удалённое блюдо и ставим первым в списке, удаляем один ингредиент
+// 2. добавляем удалённое блюдо и ставим первым в списке, удаляем один ингредиент "мука"
 
 food.unshift(JSON.stringify(syrniki.name));
 
 console.log(`2. ${food[0]}`);
 
-delete syrniki.ingredients[1];
+syrniki.ingredients.splice(1, 1);
 
 console.log(syrniki.ingredients);
 
