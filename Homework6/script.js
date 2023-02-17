@@ -1,90 +1,76 @@
-let year = prompt('В каком году крестили Русь?');
-
-if (year == 988) {
-    alert('Правильно');
-} else {
-    alert('Неправильно');
-}
-
-
-
-alert('Начнём наш квиз. Узнаем, насколько хорошо ты знаешь фильмы о Гарри Поттере ;)');
-
-
-
-let question1 = prompt(`Вопрос 1. Сколько времени нужно на изготовление Оборотного зелья? Напиши цифру с вариантом ответа.
-                            1. День
-                            2. Месяц
-                            3. Неделя`);
-if (question1 == 2) {
-    alert('Правильно');
-} else {
-    alert('Неправильно');
-}
-
-
-let question2 = prompt(`Вопрос 2. Как зовут змею Волан-де-Морта? Напиши цифру с вариантом ответа.
-                            1. Нагайна
-                            2. Невилл
-                            3. Наргл`);
-if (question2 == 1) {
-    alert('Правильно');
-} else {
-    alert('Неправильно');
-}
-
-
-let question3 = prompt(`Вопрос 3. Что входит в Дары Смерти? Напиши цифру с вариантом ответа.
-                            1. Философский камень, Мантия-Невидимка, Бузинная палочка
-                            2. Мантия-невидимка, Воскрешающий камень, Палочка Гарри Поттера
-                            3. Бузинная палочка, Мантия-невидимка, Воскрешающий камень`);
-if (question3 == 3) {
-    alert('Правильно');
-} else {
-    alert('Неправильно');
-}
-
-
-let question4 = prompt(`Вопрос 4. Сколько охотников в стандратной игре по Квиддичу? Напиши цифру с вариантом ответа.
-                            1. 4
-                            2. 3
-                            3. 1
-                            4. 13`);
-if (question4 == 2) {
-    alert('Правильно');
-} else {
-    alert('Неправильно');
-}
-
-
-let question5 = prompt(`Вопрос 5. Сколько детей в семье Уизли? Напиши число.`);
-if (question5 == 5) {
-    alert('Правильно');
-} else {
-    alert('Неправильно');
-}
-
-
-let question6 = prompt(`Вопрос 6. Из какой школы прибыл Виктор Крам на турнир Трёх волшебников? Запиши ответ.`);
-if (question6 == 'Дурмстранг') {
-    alert('Правильно');
-}
-else if (question6 == 'дурмстранг') {
-    alert('Правильно');
-}
-else {
-    alert('Неправильно');
-}
-
-
-
-if (question1 == 2, question2 == 1, question3 == 3, question4 == 2,
-    question5 == 5, question6 == 'Дурмстранг') {
-        alert('6/6. Молодец!');
-} else if (question1 == 2, question2 == 1, question3 == 3, question4 == 2,
-    question5 == 5, question6 == 'дурмстранг') {
-        alert('6/6. Молодец!');
-} else {
-    alert(`Не все ответы верные :(
-    Тебе нужно устроить марафон по фильмам и освежить память ;)`);
-}
+let syrniki = { 
+    name: 'Сырники',                            //блюдо
+    ingredients: ['творог', 'мука', 'яйцо'],   //ингредиенты
+    costPrice: 50,                             //себестоимость
+    price: 100                                 //цена блюда
+  };
+  
+  
+  
+  let carbonara = {
+    name: 'Карбонара',
+    ingredients: ['паста', 'бекон', 'сливки', 'сыр'],
+    costPrice: 180,
+    price: 350
+  };
+  
+  
+  
+  let bananaToast = {
+    name: 'Тосты с бананом',
+    ingredients: ['тост', 'Нутелла', 'банан'],
+    costPrice: 30,
+    price: 60
+  };
+  
+  
+  let food = [syrniki, carbonara, bananaToast];
+  
+  // 1. удаляем первое блюдо и смещаем массив налево
+  
+  food.shift();
+  
+  console.log('1.'+' '+JSON.stringify(food[0]));
+  
+  
+  
+  // 2. добавляем удалённое блюдо и ставим первым в списке, удаляем один ингредиент
+  
+  food.unshift(JSON.stringify(syrniki));
+  
+  console.log('2.'+' '+food[0]);
+  
+  delete syrniki.ingredients[1];
+  
+  console.log(syrniki.ingredients);
+  
+  
+  
+  
+  // 3. считаем, сколько заработаем на проданных блюдах
+  
+  let summPrice = syrniki.price+carbonara.price+bananaToast.price; //сумма за три проданных блюда
+  
+  let summCostPrice = syrniki.costPrice+carbonara.costPrice+bananaToast.costPrice; //сумма себестоимости трёх блюд
+  
+  console.log(`3. Выручка за три проданных блюда = ${summPrice-summCostPrice}`); //сумма выручки за три блюда
+  
+  console.log(`Выручка за Сырники = ${syrniki.price-syrniki.costPrice}`);
+  
+  console.log(`Выручка за Карбонару = ${carbonara.price-carbonara.costPrice}`);
+  
+  console.log(`Выручка за Тосты с бананом = ${bananaToast.price-bananaToast.costPrice}`);
+  
+  
+  
+  // 4. удаляем элементы из массива, кроме одного - bananaToast
+  
+  //delete food[0];
+  
+  //delete food[1];
+  
+  food.splice(0, 2);
+  
+  console.log('4.'+' '+JSON.stringify(food[0]));
+  console.log(JSON.stringify(food[1]));
+  console.log(JSON.stringify(food[2]));
