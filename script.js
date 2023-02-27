@@ -1,90 +1,117 @@
-let year = prompt('В каком году крестили Русь?');
+let i = 0;
 
-if (year == 988) {
-    alert('Правильно');
-} else {
-    alert('Неправильно');
+while (i <= 10) {
+    alert(i);
+    i = i+2;
 }
 
 
 
-alert('Начнём наш квиз. Узнаем, насколько хорошо ты знаешь фильмы о Гарри Поттере ;)');
 
+let femaleNames = ['Светлана', 'Ольга', 'Татьяна', 'Анна', 'Мария', 'Елена', 'Евгения', 'Александра', 'Юлия'];
+let femaleNamesString = '';
 
+{
+    let i = 0;
+    
+    while(i < femaleNames.length) {
+       
+        femaleNamesString += femaleNames[i] + ',';
 
-let question1 = prompt(`Вопрос 1. Сколько времени нужно на изготовление Оборотного зелья? Напиши цифру с вариантом ответа.
-                            1. День
-                            2. Месяц
-                            3. Неделя`);
-if (question1 == 2) {
-    alert('Правильно');
-} else {
-    alert('Неправильно');
-}
+        alert(`Женские имена: ${femaleNamesString}`);
 
+        if (i === 4) {
+        break;
+        }   
 
-let question2 = prompt(`Вопрос 2. Как зовут змею Волан-де-Морта? Напиши цифру с вариантом ответа.
-                            1. Нагайна
-                            2. Невилл
-                            3. Наргл`);
-if (question2 == 1) {
-    alert('Правильно');
-} else {
-    alert('Неправильно');
-}
+    i++;
 
-
-let question3 = prompt(`Вопрос 3. Что входит в Дары Смерти? Напиши цифру с вариантом ответа.
-                            1. Философский камень, Мантия-Невидимка, Бузинная палочка
-                            2. Мантия-невидимка, Воскрешающий камень, Палочка Гарри Поттера
-                            3. Бузинная палочка, Мантия-невидимка, Воскрешающий камень`);
-if (question3 == 3) {
-    alert('Правильно');
-} else {
-    alert('Неправильно');
-}
-
-
-let question4 = prompt(`Вопрос 4. Сколько охотников в стандратной игре по Квиддичу? Напиши цифру с вариантом ответа.
-                            1. 4
-                            2. 3
-                            3. 1
-                            4. 13`);
-if (question4 == 2) {
-    alert('Правильно');
-} else {
-    alert('Неправильно');
-}
-
-
-let question5 = prompt(`Вопрос 5. Сколько детей в семье Уизли? Напиши число.`);
-if (question5 == 5) {
-    alert('Правильно');
-} else {
-    alert('Неправильно');
-}
-
-
-let question6 = prompt(`Вопрос 6. Из какой школы прибыл Виктор Крам на турнир Трёх волшебников? Запиши ответ.`);
-if (question6 == 'Дурмстранг') {
-    alert('Правильно');
-}
-else if (question6 == 'дурмстранг') {
-    alert('Правильно');
-}
-else {
-    alert('Неправильно');
+    }
 }
 
 
 
-if (question1 == 2, question2 == 1, question3 == 3, question4 == 2,
-    question5 == 5, question6 == 'Дурмстранг') {
-        alert('6/6. Молодец!');
-} else if (question1 == 2, question2 == 1, question3 == 3, question4 == 2,
-    question5 == 5, question6 == 'дурмстранг') {
-        alert('6/6. Молодец!');
-} else {
-    alert(`Не все ответы верные :(
-    Тебе нужно устроить марафон по фильмам и освежить память ;)`);
-}
+let syrniki = { 
+    name: 'Сырники',                            //блюдо
+    //ingredients: ['творог', 'мука', 'яйцо'],   //ингредиенты
+    //costPrice: 50,                             //себестоимость
+    price: 90                                 //цена блюда
+  };
+  
+  
+  
+  let carbonara = {
+    name: 'Карбонара',
+    //ingredients: ['паста', 'бекон', 'сливки', 'сыр'],
+    //costPrice: 175,
+    price: 320
+  };
+  
+  
+  
+  let bananaToast = {
+    name: 'Тосты с бананом',
+    //ingredients: ['тост', 'Нутелла', 'банан'],
+    //costPrice: 30,
+    price: 55
+  };
+  
+  
+  let food = [syrniki, carbonara, bananaToast];
+
+  let syrnikiIngredients = ['творог', 'мука', 'яйцо'];
+
+  let carbonaraIngredinets = ['паста', 'бекон', 'сливки', 'сыр'];
+
+  let bananaToastIngredients = ['тост', 'нутелла', 'банан'];
+
+
+  let syrnikiIngredientsPrice = {
+    'творог': 20,
+    'мука': 10,
+    'яйцо': 20
+  }
+  
+  let syrnikiIngredientsSum = 0;
+  for (let key in syrnikiIngredientsPrice) {
+    syrnikiIngredientsSum += syrnikiIngredientsPrice[key];
+  }
+
+  alert(`Себестоимость блюда "Сырники" - ${syrnikiIngredientsSum}`);
+
+
+
+  let carbonaraIngredientsPrice = {
+    'паста': 50,
+    'бекон': 50,
+    'сливки': 40,
+    'сыр': 35
+  }
+
+  let carbonaraIngredientsSum = 0;
+  for (let key in carbonaraIngredientsPrice) {
+    carbonaraIngredientsSum += carbonaraIngredientsPrice[key];
+  }
+  
+  alert(`Себестоимость блюда "Карбонара" - ${carbonaraIngredientsSum}`);
+
+
+
+  let bananaToastIngredientsPrice = {
+    'тост': 10,
+    'нутелла': 10,
+    'банан': 10
+  }
+
+  let bananaToastIngredientsSum = 0;
+  for (let key in bananaToastIngredientsPrice) {
+    bananaToastIngredientsSum += bananaToastIngredientsPrice[key];
+  }
+  
+  alert(`Себестоимость блюда "Тосты с бананом" - ${bananaToastIngredientsSum}`);
+
+
+
+  alert(`Доход от проданного блюда "Сырники" - ${syrniki.price-syrnikiIngredientsSum}`);
+  alert(`Доход от проданного блюда "Карбонара" - ${carbonara.price-carbonaraIngredientsSum}`);
+  alert(`Доход от проданного блюда "Тосты с бананом" - ${bananaToast.price-bananaToastIngredientsSum}`);
