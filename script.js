@@ -93,8 +93,6 @@ let syrniki = {
     food[i].costPrice = sum;
   };
 
-  alert(`Массив с данными о себестоимости блюд:  ${JSON.stringify(food)}`);
-
 
 
   //3.3 Посчитайте с помощью цикла профит для каждого блюда и запишите его в объект блюда.
@@ -103,4 +101,4 @@ let syrniki = {
     food[i].profit = food[i].price - food[i].costPrice;
   };
 
-  alert(`Массив с данными о прибыли от каждого блюда: ${JSON.stringify(food)}`);
+  alert(`Массив с данными о себестоимости и прибыли от каждого блюда: ${JSON.stringify(food)}`);
