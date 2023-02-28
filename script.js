@@ -1,3 +1,5 @@
+//1. Выведите все четные числа до 10 включительно. ⭐не используйте оператор **continue**.
+
 let i = 0;
 
 while (i <= 10) {
@@ -7,6 +9,7 @@ while (i <= 10) {
 
 
 
+//2. Создайте бесконечный цикл и прервите его на 5-ой итерации.
 
 let femaleNames = ['Светлана', 'Ольга', 'Татьяна', 'Анна', 'Мария', 'Елена', 'Евгения', 'Александра', 'Юлия'];
 let femaleNamesString = '';
@@ -31,87 +34,73 @@ let femaleNamesString = '';
 
 
 
+//3.1. Создайте массив блюд, с названием, ингредиентами, ценой приготовления и ценой реализации.
+
 let syrniki = { 
-    name: 'Сырники',                            //блюдо
-    //ingredients: ['творог', 'мука', 'яйцо'],   //ингредиенты
-    //costPrice: 50,                             //себестоимость
-    price: 90                                 //цена блюда
+    name: 'Сырники',                            
+    ingredients: ['творог', 'мука', 'яйцо'],   
+    costPrice: 0,                             
+    price: 90,
+    profit: 0                                 
   };
   
   
   
   let carbonara = {
     name: 'Карбонара',
-    //ingredients: ['паста', 'бекон', 'сливки', 'сыр'],
-    //costPrice: 175,
-    price: 320
+    ingredients: ['паста', 'бекон', 'сливки', 'сыр'],
+    costPrice: 0,
+    price: 320,
+    profit: 0
   };
   
   
   
   let bananaToast = {
     name: 'Тосты с бананом',
-    //ingredients: ['тост', 'Нутелла', 'банан'],
-    //costPrice: 30,
-    price: 55
+    ingredients: ['тост', 'Нутелла', 'банан'],
+    costPrice: 0,
+    price: 55,
+    profit: 0
   };
   
   
   let food = [syrniki, carbonara, bananaToast];
 
-  let syrnikiIngredients = ['творог', 'мука', 'яйцо'];
 
-  let carbonaraIngredinets = ['паста', 'бекон', 'сливки', 'сыр'];
-
-  let bananaToastIngredients = ['тост', 'нутелла', 'банан'];
-
-
-  let syrnikiIngredientsPrice = {
+  let ingredientsPrice = {
     'творог': 20,
     'мука': 10,
-    'яйцо': 20
-  }
-  
-  let syrnikiIngredientsSum = 0;
-  for (let key in syrnikiIngredientsPrice) {
-    syrnikiIngredientsSum += syrnikiIngredientsPrice[key];
-  }
-
-  alert(`Себестоимость блюда "Сырники" - ${syrnikiIngredientsSum}`);
-
-
-
-  let carbonaraIngredientsPrice = {
+    'яйцо': 20,
     'паста': 50,
     'бекон': 50,
     'сливки': 40,
-    'сыр': 35
-  }
-
-  let carbonaraIngredientsSum = 0;
-  for (let key in carbonaraIngredientsPrice) {
-    carbonaraIngredientsSum += carbonaraIngredientsPrice[key];
-  }
-  
-  alert(`Себестоимость блюда "Карбонара" - ${carbonaraIngredientsSum}`);
-
-
-
-  let bananaToastIngredientsPrice = {
+    'сыр': 35,
     'тост': 10,
-    'нутелла': 10,
+    'Нутелла': 10,
     'банан': 10
   }
-
-  let bananaToastIngredientsSum = 0;
-  for (let key in bananaToastIngredientsPrice) {
-    bananaToastIngredientsSum += bananaToastIngredientsPrice[key];
-  }
   
-  alert(`Себестоимость блюда "Тосты с бананом" - ${bananaToastIngredientsSum}`);
+
+
+  //3.2. Посчитайте стоимость приготовления динамически (с помощью цикла).
+
+  for (i = 0; i < food.length; i++) {
+    let sum = 0;
+    for (let j = 0; j < food[i].ingredients.length; j++) {
+      sum += ingredientsPrice[food[i].ingredients[j]];
+    }
+    food[i].costPrice = sum;
+  };
+
+  alert(`Массив с данными о себестоимости блюд:  ${JSON.stringify(food)}`);
 
 
 
-  alert(`Доход от проданного блюда "Сырники" - ${syrniki.price-syrnikiIngredientsSum}`);
-  alert(`Доход от проданного блюда "Карбонара" - ${carbonara.price-carbonaraIngredientsSum}`);
-  alert(`Доход от проданного блюда "Тосты с бананом" - ${bananaToast.price-bananaToastIngredientsSum}`);
+  //3.3 Посчитайте с помощью цикла профит для каждого блюда и запишите его в объект блюда.
+
+  for (i = 0; i < food.length; i++) {
+    food[i].profit = food[i].price - food[i].costPrice;
+  };
+
+  alert(`Массив с данными о прибыли от каждого блюда: ${JSON.stringify(food)}`);
