@@ -1,5 +1,5 @@
 export function LoginPass(login, pass) {
-  usersData = {
+  let usersData = {
     'admin': 'root',
     'user': '123'
   };

@@ -6,7 +6,7 @@ let nextStep = false;
 
 while (true) {
 
-    let enterAge = prompt(yourAge(`Введите свой возраст:`));
+    let enterAge = prompt(yourAge(`Введите свой возраст`));
 
     if (enterAge >= 18) {
         nextStep = true;
@@ -35,7 +35,7 @@ while (nextStep) {
  
     alert(messages[enterData.result]);
 
-    if (messages[enterData.result] === 'Success') {
+    if (enterData.result === 'Success') {
         nextStep = false;
-    }
-}
+    };
+};
