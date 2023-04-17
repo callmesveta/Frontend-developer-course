@@ -58,15 +58,15 @@ let nonVeganIngredients = ['творог', 'яйцо', 'бекон', 'сливк
 console.log(`1. Себестоимость блюд с помощью 'reduce'.`);
 
 food.forEach(function (item, index, arr) {
-    let costPrice = food[index].ingredients.reduce(function (sum, item, index, arr) {
+    let costPrice = item.ingredients.reduce(function (sum, item, index, arr) {
         return sum + ingredientsPrice[item];
     }, 0);
 
-food[index].costPrice = costPrice;
+item.costPrice = costPrice;
 });
 
 food.forEach(function (item, index) {
-    console.log(food[index].name);
+    console.log(item.name);
     console.log(item);
 });
 
@@ -75,7 +75,7 @@ food.forEach(function (item, index) {
 console.log(`2. Массив с названием и стоимостью блюд с поомщью 'map'.`);
 
 let nameAndPrice = food.map(function(item, index, arr) {
-    return [food[index].name, food[index].price];
+    return [item.name, item.price];
 });
 
 console.log(nameAndPrice);
