@@ -58,12 +58,13 @@ console.log(veganFood);
 console.log(`4. Проверяем полностью ли у нас вегетарианское меню с помощью 'every'.`);
 
 let veganMenuAll = food.every(function (item, index, arr) {
-    return checkVeganMenu = item.ingredients.every(function (item, index, arr) {
+    return item.ingredients.every(function (item, index, arr) {
         return ingredients[item].vegan == true;
     });
 });
 
 console.log(veganMenuAll);
+
 
 // 5. Создайте массив с вегетарианскими блюдами с помощью filter.
 
@@ -78,5 +79,3 @@ let veganFoodMassive = food.filter(function (item, index, arr) {
 console.log(veganFoodMassive);
 
 })
-
-.catch(error => console.error(error))
