@@ -1,0 +1,12 @@
+{
+    "творог": {"price": 20, "vegan": false},
+    "мука": {"price": 10, "vegan": true},
+    "яйцо": {"price": 20, "vegan": false},
+    "паста": {"price": 50, "vegan": true},
+    "бекон": {"price": 50, "vegan": false},
+    "сливки": {"price": 40, "vegan": false},
+    "сыр": {"price": 35, "vegan": false},
+    "тост": {"price": 10, "vegan": true},
+    "Нутелла": {"price": 10, "vegan": true},
+    "банан": {"price": 10, "vegan": true}
+}
