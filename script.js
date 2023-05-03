@@ -78,3 +78,5 @@ let veganFoodMassive = food.filter(function (item, index, arr) {
 console.log(veganFoodMassive);
 
 })
+
+.catch(error => console.error(error))
