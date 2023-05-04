@@ -4,11 +4,11 @@
 
 let food;
 
-fetch('/menu.json')
+fetch('menu.json')
     .then((response) => response.json())
     .then((response) => {
         food = response;
-        return fetch('/ingredients.json');
+        return fetch('ingredients.json');
     })
 .then((response) => response.json())
 .then(ingredients => {
